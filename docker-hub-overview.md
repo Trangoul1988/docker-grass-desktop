@@ -18,7 +18,7 @@ The image can easily be pulled from Docker hub and configured with just 3 enviro
 
 ### Command line:
 ```sh
-docker run docker.io/nottherealjoe/grass-desktop \
+docker run docker.io/trangoul/grass-desktop:latest \
   --env VNC_PASSWORD="mypasswd" \
   --env GRASS_USERNAME="getgrassusername@example.com" \
   --env GRASS_PASSWORD="supersecret" \
@@ -29,7 +29,7 @@ docker run docker.io/nottherealjoe/grass-desktop \
 ```yaml
 services:
   grass:
-    image: docker.io/nottherealjoe/grass-desktop
+    image: docker.io/trangoul/grass-desktop:latest
     environment:
       VNC_PASSWORD: "changeme"
       GRASS_USERNAME: "getgrassusername@example.com"
@@ -40,11 +40,11 @@ services:
 ```
 
 - Set `VNC_PASSWORD` to your desired password for the internal VNC server. Note that this password can only be **up to 8 characters long**. Longer passwords get truncated and will confuse you when you try to log in! Leaving it blank will cause the container to randomly generate a password, and you will not be able to access the VNC server.
-- Set `GRASS_USERNAME` and `GRASS_PASSWORD` to your credentials created on getgrass.io. If you don't have a username and password yet, [use my referral link to sign up](https://app.getgrass.io/register/?referralCode=sqKqTw8JHScyGFY).
+- Set `GRASS_USERNAME` and `GRASS_PASSWORD` to your credentials created on getgrass.io. If you don't have a username and password yet, [use my referral link to sign up](https://app.getgrass.io/register/?referralCode=DLZzmgbPgg46WUJ).
 - The port forward shown above will allow you to access the internal VNC server on the host's port 5900. Change the port as needed. You may omit it completely if you don't want to access the VNC server. Access isn't required and would only be used for troubleshooting.
 
 ## Source Repo
-[https://github.com/NotTheRealJoe/docker-grass-desktop](https://github.com/NotTheRealJoe/docker-grass-desktop) contains the code used to build the images in this repository.
+[https://github.com/Trangoul1988/docker-grass-desktop](https://github.com/Trangoul1988/docker-grass-desktop) contains the code used to build the images in this repository.
 
 ## Notices
 The creator of this project is not affiliated with Grass or its owners. The Grass and getgrass.io names are used here only to indicate technical compatibility, and should not be considered to be any kind of endorsement or approval of this project by Grass.
