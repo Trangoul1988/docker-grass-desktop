@@ -2,7 +2,7 @@
 # for details on how to set them appropriately.
 services:
   grass:
-    image: docker.io/nottherealjoe/grass-desktop
+    image: docker.io/trangoul/grass-desktop:latest
     environment:
       VNC_PASSWORD: mypasswd
       GRASS_USERNAME: "getgrassusername@example.com"
