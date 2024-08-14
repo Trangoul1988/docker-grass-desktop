@@ -3,7 +3,7 @@
 ## What is it?
 This repository contains the code for building a docker image that can run the Grass Desktop application for getgrass.io.
 
-**[Get this image from Docker Hub!](https://hub.docker.com/r/nottherealjoe/grass-desktop)**
+**[Get this image from Docker Hub!](https://hub.docker.com/r/trangoul/grass-desktop)**
 
 In contrast to other Grass docker images, this one uses the **Grass Desktop** application. This means:
 - You'll get 2x the points you would with the Grass Lite Chrome extension.
@@ -14,7 +14,7 @@ Most users will simply pull the image from docker hub to run it.
 
 ### Command line
 ```sh
-docker run docker.io/nottherealjoe/grass-desktop \
+docker run docker.io/trangoul/grass-desktop:latest \
   --env VNC_PASSWORD="mypasswd" \
   --env GRASS_USERNAME="getgrassusername@example.com" \
   --env GRASS_PASSWORD="supersecret" \
@@ -25,7 +25,7 @@ docker run docker.io/nottherealjoe/grass-desktop \
 ```yaml
 services:
   grass:
-    image: docker.io/nottherealjoe/grass-desktop
+    image: docker.io/trangoul/grass-desktop:latest
     environment:
       VNC_PASSWORD: mypasswd
       GRASS_USERNAME: "getgrassusername@example.com"
@@ -36,7 +36,7 @@ services:
 ```
 
 - Set `VNC_PASSWORD` to your desired password for the internal VNC server. Note that this password can only be **up to 8 characters long**. Longer passwords get truncated and will confuse you when you try to log in! If you don't plan to use the VNC server, it still needs to be set to something.
-- Set `GRASS_USERNAME` and `GRASS_PASSWORD` to your credentials created on getgrass.io. If you don't have a username and password yet, [use my referral link to sign up](https://app.getgrass.io/register/?referralCode=sqKqTw8JHScyGFY).
+- Set `GRASS_USERNAME` and `GRASS_PASSWORD` to your credentials created on getgrass.io. If you don't have a username and password yet, [use my referral link to sign up](https://app.getgrass.io/register/?referralCode=DLZzmgbPgg46WUJ).
 - The port forward shown above will allow you to access the internal VNC server on the host's port 5900. Change the port as needed. You may omit it completely if you don't want to access the VNC server. Access isn't required and would only be used for troubleshooting.
 
 ## Notices
