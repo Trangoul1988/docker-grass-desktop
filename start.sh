@@ -28,7 +28,7 @@ if [ -z "$GRASS_USERNAME" ] || [ -z "$GRASS_PASSWORD" ]; then
     >&2 echo "The GRASS_USERNAME and GRASS_PASSWORD environment variables need to be set"
     >&2 echo "before docker-grass-desktop can start. If you do not already have a username"
     >&2 echo "and password, sign up in a browser at:"
-    >&2 echo "https://app.getgrass.io/register/?referralCode=sqKqTw8JHScyGFY"
+    >&2 echo "https://app.getgrass.io/register/?referralCode=DLZzmgbPgg46WUJ"
     >&2 echo "The container will now exit."
     exit 243
 fi
