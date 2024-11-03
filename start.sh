@@ -38,12 +38,15 @@ fi
 if ! [ -f ~/.grass-configured ]; then
     # Wait for the grass window to be available
     while [[ "$(xdotool search --name Grass | wc -l)" -lt 3 ]]; do
-        sleep 5
+        sleep 10
     done
 
     # Handle grass login
     xdotool search --name Grass | tail -n1 | xargs xdotool windowfocus
+    sleep 5
     xdotool key Tab
+    xdotool key Return
+    sleep 5
     xdotool key Tab
     xdotool key Tab
     xdotool key Tab
@@ -51,7 +54,7 @@ if ! [ -f ~/.grass-configured ]; then
     xdotool key Tab
     xdotool type "$GRASS_PASSWORD"
     xdotool key Return
-    sleep 5
+    sleep 10
     xdotool key Escape
 
     touch ~/.grass-configured
