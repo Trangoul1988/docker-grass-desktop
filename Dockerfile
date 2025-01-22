@@ -20,7 +20,7 @@ RUN rm -r /tmp/grass-fix
 FROM docker.io/ubuntu:latest
 
 RUN apt-get -y update; apt-get -y --no-install-recommends --no-install-suggests install \
-    wget tini gpg openbox ca-certificates xdotool
+    wget tini gpg openbox ca-certificates xdotool libayatana-appindicator3-1 libwebkit2gtk-4.1-0 libgtk-3-0
 
 RUN update-ca-certificates
 
