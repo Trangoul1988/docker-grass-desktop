@@ -45,12 +45,20 @@ if ! [ -f ~/.grass-configured ]; then
     xdotool search --name Grass | tail -n1 | xargs xdotool windowfocus
     xdotool key Tab
     xdotool key Tab
-    xdotool key Tab
-    xdotool key Tab
     sleep 5
     xdotool type "$GRASS_USERNAME"
     xdotool key Tab
+    xdotool key Return
+    sleep 5
+    xdotool mousemove 600 535 click 1
+    sleep 5
+    xdotool key Tab
+    xdotool key Tab
+    xdotool key Tab
+    xdotool key Tab
     xdotool type "$GRASS_PASSWORD"
+    xdotool key Tab
+    xdotool key Tab
     xdotool key Return
     sleep 10
     xdotool key Escape
