@@ -43,6 +43,7 @@ if ! [ -f ~/.grass-configured ]; then
 
     # Handle grass login
     xdotool search --name Grass | tail -n1 | xargs xdotool windowfocus
+    sleep 10
     xdotool key Tab
     xdotool key Tab
     sleep 5
