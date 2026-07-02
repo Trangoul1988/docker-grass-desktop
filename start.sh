@@ -33,7 +33,7 @@ if [ -z "$GRASS_USERNAME" ] || [ -z "$GRASS_PASSWORD" ]; then
     exit 243
 fi
 
-/usr/bin/grass &
+/usr/bin/grass-desktop &
 
 if ! [ -f ~/.grass-configured ]; then
     # Wait for the grass window to be available
@@ -67,4 +67,4 @@ if ! [ -f ~/.grass-configured ]; then
     touch ~/.grass-configured
 fi
 
-fg %/usr/bin/grass
+fg %/usr/bin/grass-desktop
